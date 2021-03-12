@@ -1,6 +1,6 @@
 using System;
 
-namespace Assessment.Models
+namespace Assessment.Web.Models
 {
     public class ErrorViewModel
     {

@@ -1,5 +1,4 @@
-﻿using Assessment.Models;
-using Assessment.Web.Controllers;
+﻿using Assessment.Web.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SynicTools;
@@ -9,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Assessment.Controllers
+namespace Assessment.Web.Controllers
 {
     public class HomeController : SynicController
     {

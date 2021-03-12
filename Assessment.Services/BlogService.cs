@@ -1,5 +1,6 @@
 ﻿using Assessment.Data;
 using Assessment.Services.Filters;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using SynicTools;
 using System;
@@ -24,7 +25,9 @@ namespace Assessment.Services
 
         public override IQueryable<Blog> Get(BlogFilters filters, params Func<IQueryable<Blog>, IIncludableQueryable<Blog, object>>[] includes)
         {
-            var res = this.All(filters, includes);
+            //var res = this.All(filters, includes);
+            IQueryable<Blog> res = base.Context.Blogs.Include(x => x.Author);
+
 
             return res;
         }
